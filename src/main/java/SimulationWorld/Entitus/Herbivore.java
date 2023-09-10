@@ -1,5 +1,6 @@
 package SimulationWorld.Entitus;
 import SimulationWorld.*;
+import SimulationWorld.Icon.Icons;
 
 public class Herbivore extends Creature { // Класс реализующий - травоядное животное
     public Herbivore(Coordinates coordinates, int speed, int HP) {

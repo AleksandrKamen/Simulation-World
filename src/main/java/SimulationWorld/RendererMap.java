@@ -1,5 +1,5 @@
 package SimulationWorld;
-import SimulationWorld.Entitus.Icons;
+import SimulationWorld.Icon.Icons;
 import java.util.Arrays;
 
 public class RendererMap { // Класс реализующий отрисовку мира

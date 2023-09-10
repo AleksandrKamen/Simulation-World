@@ -1,5 +1,7 @@
 package SimulationWorld.Entitus;
 import SimulationWorld.*;
+import SimulationWorld.Icon.Icons;
+
 import java.util.ArrayList;
 
 public class Predator extends Creature{ // Класс реализующий - хищное животное

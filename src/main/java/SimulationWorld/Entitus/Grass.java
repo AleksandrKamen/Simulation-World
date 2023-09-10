@@ -1,5 +1,6 @@
 package SimulationWorld.Entitus;
 import SimulationWorld.Coordinates;
+import SimulationWorld.Icon.Icons;
 import lombok.Getter;
 
 public class Grass extends Entity{          //Класс реализующий -  ресурс для травоядных животных

@@ -1,5 +1,7 @@
 package SimulationWorld;
 import SimulationWorld.Entitus.*;
+import SimulationWorld.Icon.Icons;
+
 import java.io.*;
 
 public class UsersInterface {                    // Класс реализиющий пользовательский ввод

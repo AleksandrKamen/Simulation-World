@@ -1,5 +1,6 @@
 package SimulationWorld.Entitus;
 import SimulationWorld.Coordinates;
+import SimulationWorld.Icon.Icons;
 
 public class Rock extends Entity{   //Класс реализующий  статический объект - гора
     public Rock(Coordinates coordinates) {

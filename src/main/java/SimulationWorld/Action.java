@@ -1,5 +1,7 @@
 package SimulationWorld;
 import SimulationWorld.Entitus.*;
+import SimulationWorld.Icon.Icons;
+
 import java.util.HashMap;
 
 public abstract class Action {          // Абстрактный класс реализующий деяствия над миром
