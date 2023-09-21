@@ -1,10 +1,13 @@
 package SimulationWorld;
 import SimulationWorld.Icon.Icons;
+
+import java.io.IOException;
 import java.util.Arrays;
 
 public class RendererMap { // Класс реализующий отрисовку мира
 
     protected void render(MapWorld map) {
+        clrscr();
         String DayAndNite = Simulation.getMoveCount() % 2 == 0?Icons.DayAndNite[0]:Icons.DayAndNite[1];
         System.out.println(String.format("%7s", DayAndNite).toString().repeat(Coordinates.getMaxSize())); // Смена дня и ночи
 
@@ -34,6 +37,15 @@ public class RendererMap { // Класс реализующий отрисовк
                         "|6.Общее количество гор - %d\n%s\n",
                 "-".repeat(32), "СТАТИСТИКА МИРА", Arrays.stream(stat).sum(), map.HerbDead+map.PredDead, stat[2], map.PredDead, stat[1], map.HerbDead, stat[4], stat[0],map.GrassEat, stat[3], "-".repeat(79));
     } // Метод для отображения статистики мира
+    public static void clrscr(){           // Очистка экрана
+        //Clears Screen in java
+        try {
+            if (System.getProperty("os.name").contains("Windows"))
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            else
+                Runtime.getRuntime().exec("clear");
+        } catch (IOException | InterruptedException ex) {}
+    }
 
 
 }
