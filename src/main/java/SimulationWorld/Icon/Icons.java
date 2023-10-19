@@ -9,5 +9,6 @@ public class Icons { //Класс реализующий изображения 
     public static final String[] DeadObject = new String[]{"☠️", "🌰"};
     public static final String[] DayAndNite = new String[]{"🌞","🌘"};
     public static final String[] usersIcon = new String[]{"👇","🌏","🐼","🐫","⌛","📈","🚶","😰","✌"};
+    public static final String[] otherIcons = new String[]{"🩸"};
 
 }

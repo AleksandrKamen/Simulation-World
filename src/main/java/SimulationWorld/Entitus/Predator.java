@@ -5,7 +5,7 @@ import SimulationWorld.Icon.Icons;
 import java.util.ArrayList;
 
 public class Predator extends Creature{ // Класс реализующий - хищное животное
-    final Integer attackPower;
+    private final Integer attackPower;
 
     public Predator(Coordinates coordinates, Integer speed, Integer HP, Integer attackPower) {
         super(coordinates, speed, HP);
@@ -40,7 +40,7 @@ public class Predator extends Creature{ // Класс реализующий - �
     }                                                        // Метод реализующий ход хищника
     public <T extends Creature> void eat(T prey) {
         prey.HP -= attackPower;
-        if (!prey.icon.contains("🩸")) prey.icon += "🩸"; // Если хищник напал на жертву - дополняет иконку жертвы 🩸
+        if (!prey.icon.contains(Icons.otherIcons[0])) prey.icon += Icons.otherIcons[0];  // Если хищник напал на жертву - дополняет иконку жертвы 🩸
         HP += prey.HP <= 0?attackPower+prey.HP:attackPower;
         satiety = true;
     }                                                // напасть  животное
