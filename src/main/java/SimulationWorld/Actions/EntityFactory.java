@@ -8,23 +8,24 @@ import SimulationWorld.Map.MapWorld;
 public class EntityFactory extends Action { // Класс для  создания новых существ
 
     public  static  void addMoreEntitys(MapWorld world){
-        if (world.getEntityesOfType(Rock.class).size() < 2 && world.getRandomCoordinates() != null) addEntity(world, Rock.class);
-        if (world.getEntityesOfType(Tree.class).size() < 2 && world.getRandomCoordinates() != null) addEntity(world, Tree.class);
-        int idx = 0;
-        for (int x = 0; x < 6; x++){
-            idx = idx == 3?0:idx;
+        for (int x= 0; x < world.getClasses().length; x++){
             if (world.getRandomCoordinates() == null) break;
-            else  addEntity(world, world.classes[idx++]);
+            if ((x == 4 || x == 3) && world.getEntityesOfType(world.getClasses()[x]).size() > 1) continue;
+            addEntity(world,world.getClasses()[x]);
         }
-    } // Добавляет по 2 объекта каждого класса, кроме гор и деревьев
+        }    // Добавляет по объекту каждого класса, кроме гор и деревьев
 
     public static  <T extends Entity> void addEntity(MapWorld world, Class<T> type) {
+        int hp = (int) (1 + Math.random() * 8), power = (int) (1 + Math.random() * 3);
         Coordinates coordinates = world.getRandomCoordinates();
-        if (type == Predator.class) world.setEntity(coordinates, new Predator(coordinates, 1, (int) (1 + Math.random() * 5), (int) (1 + Math.random() * 3)));
-        else if(type == Herbivore.class) world.setEntity(coordinates, new Herbivore(coordinates, 1, (int) (1 + Math.random() * 8)));
-        else if (type == Grass.class)world.setEntity(coordinates, new Grass(coordinates, (int) (1 + Math.random() * 8)));
-        else if (type == Rock.class) world.setEntity(coordinates, new Rock(coordinates));
-        else if (type == Tree.class)world.setEntity(coordinates, new Tree(coordinates));
-        else throw new IllegalArgumentException("Указан некорректный класс");
+        Entity entity = switch (type.getSimpleName()){
+            case "Herbivore" -> new Herbivore(coordinates, 1, hp);
+            case "Predator" -> new Predator(coordinates, 1,  hp, power);
+            case "Grass" -> new Grass(coordinates, hp);
+            case "Rock" -> new Rock(coordinates);
+            case "Tree" -> new Tree(coordinates);
+            default -> throw new IllegalArgumentException("Указан некорректный класс");
+        };
+        world.setEntity(coordinates,entity);
     } // Добавляет объект  указанного класса
 }

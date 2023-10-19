@@ -30,7 +30,7 @@ public class Consol_RendererMap  extends RendererMap{ // Класс реализ
         System.out.println();
     } // Метод - отрисовка карты мира
     public void printStatic(MapWorld map){
-        int [] stat = Arrays.stream(MapWorld.classes).mapToInt(i-> map.getEntityesOfType(i).size()).toArray();
+        int [] stat = Arrays.stream(MapWorld.getClasses()).mapToInt(i-> map.getEntityesOfType(i).size()).toArray();
         System.out.printf("%s%s%1$s\n" +
                         "|1.Общее количество объектов на карте - %d\tКоличество смертей - %d\n" +
                         "|2.Общее количество хищников - %d\t\t\tКоличество умерших хищников - %d\n" +
