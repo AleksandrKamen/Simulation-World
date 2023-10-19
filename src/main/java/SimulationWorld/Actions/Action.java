@@ -17,11 +17,9 @@ public abstract class Action {          // Абстрактный класс р�
             Entity entity = world.getEntity(coordinates);
             if (entity instanceof DeadCreature)
                 world.getMapWorld().remove(coordinates);
-            else if (entity instanceof Grass) {
-                if ((((Grass) entity).getCountGrass() < 1)) {
+            else if (entity instanceof Grass && ((Grass) entity).countGrass < 1) {
                     world.GrassEat++;
                     world.setEntity(coordinates, new DeadCreature(coordinates, Icons.DeadObject[1]));
-                }
             }
             else if (entity instanceof Creature){
                 if (((Creature) entity).getHP() < 1){
