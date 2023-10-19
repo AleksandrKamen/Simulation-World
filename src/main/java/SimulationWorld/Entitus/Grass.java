@@ -1,10 +1,11 @@
 package SimulationWorld.Entitus;
-import SimulationWorld.Coordinates;
+import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Icon.Icons;
 import lombok.Getter;
 
 public class Grass extends Entity{          //Класс реализующий -  ресурс для травоядных животных
-    @Getter protected int countGrass;     // Показатель ресурса
+    @Getter
+    public int countGrass;     // Показатель ресурса
 
     public Grass(Coordinates coordinates, int countGrass) {
         super(coordinates);

@@ -1,6 +1,8 @@
-package SimulationWorld.Entitus;
-import SimulationWorld.*;
+package SimulationWorld.Entitus.Creatures;
+import SimulationWorld.Entitus.Entity;
 import SimulationWorld.Icon.Icons;
+import SimulationWorld.Map.Coordinates;
+import SimulationWorld.Map.MapWorld;
 
 import java.util.ArrayList;
 

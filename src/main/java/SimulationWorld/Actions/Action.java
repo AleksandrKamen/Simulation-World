@@ -1,6 +1,10 @@
-package SimulationWorld;
+package SimulationWorld.Actions;
+import SimulationWorld.Entitus.Creatures.Creature;
+import SimulationWorld.Entitus.Creatures.Predator;
+import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Entitus.*;
 import SimulationWorld.Icon.Icons;
+import SimulationWorld.Map.MapWorld;
 
 import java.util.HashMap;
 

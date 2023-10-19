@@ -1,12 +1,15 @@
-package SimulationWorld;
+package SimulationWorld.Render;
+import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Icon.Icons;
+import SimulationWorld.Map.MapWorld;
+import SimulationWorld.Simulation;
 
 import java.io.IOException;
 import java.util.Arrays;
 
 public class RendererMap { // Класс реализующий отрисовку мира
 
-    protected void render(MapWorld map) {
+    public void render(MapWorld map) {
         clrscr();
         String DayAndNite = Simulation.getMoveCount() % 2 == 0?Icons.DayAndNite[0]:Icons.DayAndNite[1];
         System.out.println(String.format("%7s", DayAndNite).toString().repeat(Coordinates.getMaxSize())); // Смена дня и ночи
@@ -26,7 +29,7 @@ public class RendererMap { // Класс реализующий отрисовк
         }
         System.out.println();
     } // Метод - отрисовка карты мира
-    protected void printStatic(MapWorld map){
+    public void printStatic(MapWorld map){
         int [] stat = Arrays.stream(MapWorld.classes).mapToInt(i-> map.getEntityesOfType(i).size()).toArray();
         System.out.printf("%s%s%1$s\n" +
                         "|1.Общее количество объектов на карте - %d\tКоличество смертей - %d\n" +

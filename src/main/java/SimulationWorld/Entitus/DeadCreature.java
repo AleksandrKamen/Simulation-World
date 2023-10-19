@@ -1,5 +1,5 @@
 package SimulationWorld.Entitus;
-import SimulationWorld.Coordinates;
+import SimulationWorld.Map.Coordinates;
 
 public class DeadCreature extends Entity{ // Класс реализует мертвый/съеденный объект
 

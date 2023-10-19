@@ -1,5 +1,5 @@
 package SimulationWorld.Entitus;
-import SimulationWorld.Coordinates;
+import SimulationWorld.Map.Coordinates;
 
 public abstract class Entity {       // суперкласс для  всех объектов мира
     public Coordinates coordinates;

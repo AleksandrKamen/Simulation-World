@@ -1,6 +1,6 @@
 package SimulationWorld.Entitus;
 
-import SimulationWorld.Coordinates;
+import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Icon.Icons;
 
 public class Tree extends Entity{ //Класс реализующий  статический объект - дерево

@@ -1,6 +1,9 @@
-package SimulationWorld;
+package SimulationWorld.Map;
 
 import SimulationWorld.Entitus.*;
+import SimulationWorld.Entitus.Creatures.Creature;
+import SimulationWorld.Entitus.Creatures.Herbivore;
+import SimulationWorld.Entitus.Creatures.Predator;
 import SimulationWorld.Icon.Icons;
 import lombok.Getter;
 import java.util.*;
@@ -8,7 +11,7 @@ import java.util.*;
 public class MapWorld { // Класс реализует карту мира
     public static Class [] classes = new Class[]{Grass.class, Herbivore.class, Predator.class, Rock.class, Tree.class};  // Массив классов мира
     @Getter  private HashMap<Coordinates, Entity> mapWorld = new HashMap<>();                                           // Карта мира с объектами и Getter
-    protected int HerbDead = 0, PredDead = 0, GrassEat = 0;                                                           // счетчики кол-ва смертей/съеденных фруктов
+    public int HerbDead = 0, PredDead = 0, GrassEat = 0;                                                           // счетчики кол-ва смертей/съеденных фруктов
     public boolean isSquareEmpty(Coordinates coordinates) {
         return !mapWorld.containsKey(coordinates);
     }                                                    // Проверяет пустая ли ячейка

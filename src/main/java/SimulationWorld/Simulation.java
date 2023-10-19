@@ -1,6 +1,9 @@
 package SimulationWorld;
 
-import SimulationWorld.Entitus.EntityFactory;
+import SimulationWorld.Actions.Action;
+import SimulationWorld.Actions.EntityFactory;
+import SimulationWorld.Map.MapWorld;
+import SimulationWorld.Render.RendererMap;
 import lombok.Getter;
 
 public class Simulation { // Класс реализуюший симуляцию мира

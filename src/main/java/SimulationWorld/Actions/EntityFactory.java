@@ -1,5 +1,9 @@
-package SimulationWorld.Entitus;
-import SimulationWorld.*;
+package SimulationWorld.Actions;
+import SimulationWorld.Entitus.*;
+import SimulationWorld.Entitus.Creatures.Herbivore;
+import SimulationWorld.Entitus.Creatures.Predator;
+import SimulationWorld.Map.Coordinates;
+import SimulationWorld.Map.MapWorld;
 
 public class EntityFactory extends Action { // Класс для  создания новых существ
 

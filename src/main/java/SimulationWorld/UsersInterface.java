@@ -1,6 +1,9 @@
 package SimulationWorld;
-import SimulationWorld.Entitus.*;
+import SimulationWorld.Actions.Action;
+import SimulationWorld.Actions.EntityFactory;
 import SimulationWorld.Icon.Icons;
+import SimulationWorld.Map.Coordinates;
+import SimulationWorld.Map.MapWorld;
 
 import java.io.*;
 

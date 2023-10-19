@@ -1,4 +1,4 @@
-package SimulationWorld;
+package SimulationWorld.Map;
 
 import lombok.*;
 

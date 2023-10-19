@@ -1,6 +1,7 @@
-package SimulationWorld.Entitus;
-import SimulationWorld.Coordinates;
-import SimulationWorld.MapWorld;
+package SimulationWorld.Entitus.Creatures;
+import SimulationWorld.Entitus.Entity;
+import SimulationWorld.Map.Coordinates;
+import SimulationWorld.Map.MapWorld;
 import lombok.Getter;
 
 import java.util.*;
