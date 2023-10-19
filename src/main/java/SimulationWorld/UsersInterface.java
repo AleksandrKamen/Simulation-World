@@ -36,17 +36,17 @@ public class UsersInterface {                    // Класс реализию�
                     size = reader.readLine();
                 }
                 Coordinates.setMaxSize(Integer.parseInt(size));
-                simulation.rendererMap.render(simulation.world);
+                simulation.consolRendererMap.render(simulation.world);
             } else if (answer.equals("2")) {
                 if (Coordinates.getMaxSize() == 0) {
                     System.out.println("\tРазмер мира не задан!!!");
                     continue;
                 }
                 EntityFactory.addMoreEntitys(simulation.world);
-                simulation.rendererMap.render(simulation.world);
+                simulation.consolRendererMap.render(simulation.world);
             } else if (answer.equals("3")) {
                 Action.moveAllCreature(simulation.world);
-                simulation.rendererMap.render(simulation.world);
+                simulation.consolRendererMap.render(simulation.world);
             } else if (answer.equals("4")) {
                 if (Coordinates.getMaxSize() == 0) {
                     System.out.println("\tРазмер мира не задан!!!");
@@ -60,7 +60,7 @@ public class UsersInterface {                    // Класс реализию�
                 }
                 simulation.startSimulation(Integer.parseInt(steps));
             } else if (answer.equals("5")) {
-                simulation.rendererMap.printStatic(simulation.world);
+                simulation.consolRendererMap.printStatic(simulation.world);
             } else {
                 System.out.println("Вы действительно хоите выйти ? " + Icons.usersIcon[7]);
                 if (reader.readLine().equalsIgnoreCase("Да")) {
