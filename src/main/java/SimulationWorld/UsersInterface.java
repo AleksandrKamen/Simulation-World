@@ -4,12 +4,14 @@ import SimulationWorld.Actions.EntityFactory;
 import SimulationWorld.Icon.Icons;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
+import SimulationWorld.Render.Consol_RendererMap;
 
 import java.io.*;
 
 public class UsersInterface {                    // Класс реализиющий пользовательский ввод
     private static boolean gameOver = false;    // флаг для выхода
     Simulation simulation = new Simulation();
+    Consol_RendererMap consolRendererMap = new Consol_RendererMap();
 
     public void output() throws IOException, InterruptedException {
         System.out.printf("%s\n%s\n%1$s\n", "-".repeat(40), "Добрый день! Вас приветствует симуляция!");
@@ -36,17 +38,17 @@ public class UsersInterface {                    // Класс реализию�
                     size = reader.readLine();
                 }
                 Coordinates.setMaxSize(Integer.parseInt(size));
-                simulation.consolRendererMap.render(simulation.world);
+                Action.render(simulation.world);
             } else if (answer.equals("2")) {
                 if (Coordinates.getMaxSize() == 0) {
                     System.out.println("\tРазмер мира не задан!!!");
                     continue;
                 }
                 EntityFactory.addMoreEntitys(simulation.world);
-                simulation.consolRendererMap.render(simulation.world);
+                Action.render(simulation.world);
             } else if (answer.equals("3")) {
                 Action.moveAllCreature(simulation.world);
-                simulation.consolRendererMap.render(simulation.world);
+                Action.render(simulation.world);
             } else if (answer.equals("4")) {
                 if (Coordinates.getMaxSize() == 0) {
                     System.out.println("\tРазмер мира не задан!!!");
@@ -60,7 +62,7 @@ public class UsersInterface {                    // Класс реализию�
                 }
                 simulation.startSimulation(Integer.parseInt(steps));
             } else if (answer.equals("5")) {
-                simulation.consolRendererMap.printStatic(simulation.world);
+                consolRendererMap.printStatic(simulation.world);
             } else {
                 System.out.println("Вы действительно хоите выйти ? " + Icons.usersIcon[7]);
                 if (reader.readLine().equalsIgnoreCase("Да")) {

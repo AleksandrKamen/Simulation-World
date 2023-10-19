@@ -1,4 +1,5 @@
 package SimulationWorld;
+
 import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws InterruptedException, IOException {
@@ -7,5 +8,6 @@ public class Main {
         UsersInterface output = new UsersInterface();
         output.output();
 
+        }
+
     }
-}

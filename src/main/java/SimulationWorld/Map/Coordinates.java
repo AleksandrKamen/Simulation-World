@@ -2,7 +2,6 @@ package SimulationWorld.Map;
 
 import lombok.*;
 
-import java.util.Objects;
 @EqualsAndHashCode
 public class Coordinates {                      // Класс реализует координату на карте
     @Getter @Setter private final int horizontal;
