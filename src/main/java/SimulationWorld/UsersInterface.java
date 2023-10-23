@@ -47,6 +47,7 @@ public class UsersInterface {                    // Класс реализию�
                 EntityFactory.addMoreEntitys(simulation.world);
                 Action.render(simulation.world);
             } else if (answer.equals("3")) {
+                Action.clearMap(simulation.world);
                 Action.moveAllCreature(simulation.world);
                 Action.render(simulation.world);
             } else if (answer.equals("4")) {

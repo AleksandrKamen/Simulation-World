@@ -10,36 +10,37 @@ public class Simulation { // Класс реализуюший симуляци�
 
 
 
-    MapWorld world = new MapWorld();
+   static MapWorld world = new MapWorld();
 
-    public void nextTurn() {
+    public static void nextTurn() {
+        Action.clearMap(world);
         Action.moveAllCreature(world);
         Action.checkPopulation(world);
         Action.render(world);
         moveCount++;
     } // Метод - симуляция 1 хода и его отрисовка
 
-    public void startSimulation(int count) {
+    public static void startSimulation(int count) {
         moveCount = 0;
         stop = false;
         while (!stop) {
-            this.nextTurn();
-            this.pauseSimulationAfterCountSteps(count);
+            nextTurn();
+            pauseSimulationAfterCountSteps(count);
         }
     }                                                  // метод запускает симуляцию на указанное кол-во ходов
-    public void startSimulation(){
+    public static void startSimulation(){
         moveCount = 0;
         stop = false;
         while (!stop) {
-            this.nextTurn();
+            nextTurn();
         }
     }
 
-    public void pauseSimulationAfterCountSteps(int count) {
+    public static void pauseSimulationAfterCountSteps(int count) {
         stop = count == moveCount?true:false;
     } // метод для приостаноки цикла симуляции
 
-    public void stopSimulation(){
+    public static void stopSimulation(){
         stop = true;
     }
 

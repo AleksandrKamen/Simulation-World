@@ -27,6 +27,13 @@ public class MapWorld { // Класс реализует карту мира
     public <T> Set<Coordinates> getEntityesOfType(Class<T> type) {
        return  mapWorld.keySet().stream().filter(c-> getEntity(c).getClass() == type).collect(Collectors.toSet());
     }                            // Получить Координаты  существ определенного типа
+
+    public Set<Creature> getAllCreature(){
+        return  mapWorld.values().stream().filter(c-> c instanceof Creature).map(c-> (Creature) c) .collect(Collectors.toSet());
+    }
+    public Set<Coordinates> getAllDead(){
+        return  mapWorld.keySet().stream().filter(c-> getEntity(c).getClass() == DeadCreature.class).collect(Collectors.toSet());
+    }
     public void removeCreature(Creature creature, Coordinates coordinates) { // Переставить животное
         mapWorld.remove(creature.coordinates);
         setEntity(coordinates, creature);
@@ -41,5 +48,6 @@ public class MapWorld { // Класс реализует карту мира
         }
         return emptySquare;
     }                                            // Получить список пустых ячеек
+
 
 }
