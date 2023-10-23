@@ -1,6 +1,8 @@
 package SimulationWorld.Entitus;
 import SimulationWorld.Map.Coordinates;
 
+import javax.swing.*;
+
 public abstract class Entity {       // суперкласс для  всех объектов мира
     public Coordinates coordinates;
     public String icon;
@@ -12,7 +14,9 @@ public abstract class Entity {       // суперкласс для  всех о
     }
     protected abstract String getRandomIcon(); // Получить случайную иконку
 
-
+    public ImageIcon getImage() {
+        return new ImageIcon(path);
+    }
 
 
 }
