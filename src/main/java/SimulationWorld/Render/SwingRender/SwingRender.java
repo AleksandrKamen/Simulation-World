@@ -15,7 +15,7 @@ public class SwingRender extends RendererMap {
         JFrame window = new JFrame();                          // Создает окно
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Завершает работу  при закрытии
         window.setResizable(false);                           // Запрет на изменение окна
-        window.setTitle("Simulation");                      // Устанавливает название
+        window.setTitle("Simulation world project");                      // Устанавливает название
 
         window.setLayout(new GridBagLayout());               // Устанавливает компановку - размещение в двухмерной сетке
         GridBagConstraints constraints = new GridBagConstraints();

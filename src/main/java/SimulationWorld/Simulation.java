@@ -13,9 +13,6 @@ public class Simulation { // Класс реализуюший симуляци�
         Coordinates.setMaxSize(15);
         Action.render(Simulation.world);
     }
-
-
-
   @Getter static MapWorld world = new MapWorld();
 
     @SneakyThrows
