@@ -20,12 +20,12 @@ public class Tree extends Entity{ //Класс реализующий  стат�
     }
 
     @Override
-    public String getRandomIcon() {
+    public String getRandomIconThisClass() {
         return Icons.TreeIcon [(int) (Math.random() * Icons.TreeIcon.length)];
     } //получить случайную иконку
 
     @Override
     public String getRandomImageThisClass() {
-        return "src/main/resources/Picture/tree.png";
+        return res + "tree.png";
     }
 }

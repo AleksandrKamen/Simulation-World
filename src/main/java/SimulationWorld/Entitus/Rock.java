@@ -9,7 +9,7 @@ public class Rock extends Entity{   //Класс реализующий  ста�
     }
 
     @Override
-    public String getRandomIcon() {
+    public String getRandomIconThisClass() {
         return Icons.RockIcon[(int) (Math.random() * Icons.RockIcon.length)]; // Получить случайную иконку
     }
 

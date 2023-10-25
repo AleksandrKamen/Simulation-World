@@ -9,7 +9,7 @@ public class DeadEntity extends Entity{ // Класс реализует мер�
     }
 
     @Override
-    protected String getRandomIcon() {return "";} // Получить случайную иконку
+    protected String getRandomIconThisClass() {return "";} // Получить случайную иконку
 
     @Override
     public String getRandomImageThisClass() {

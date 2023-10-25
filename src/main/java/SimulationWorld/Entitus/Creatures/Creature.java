@@ -88,7 +88,7 @@ public abstract class Creature extends Entity {                              // 
     } //Метод  возвращает множество  существ рядом с заданной клеткой/координатой
 
     protected void dead(MapWorld world){
-        Coordinates coordinates1 = coordinates;
+        var coordinates1 = coordinates;
         DeadEntity deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[0]);
         deadEntity.setPathPicture("src/main/resources/Picture/skull.png");
         world.getMapWorld().remove(coordinates1);

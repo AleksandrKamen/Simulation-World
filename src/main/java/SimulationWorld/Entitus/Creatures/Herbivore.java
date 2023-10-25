@@ -32,21 +32,21 @@ public class Herbivore extends Creature { // Класс реализующий -
     } // Совершить ход
     public void eatGrass(Grass grass, MapWorld world) {
         HP += grass.countGrass;
-        Coordinates coordinates1 = grass.coordinates;
+        var coordinates1 = grass.coordinates;
         world.getMapWorld().remove(coordinates1);
         DeadEntity deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[1]);
-        deadEntity.setPathPicture("src/main/resources/Picture/apple red.png");
+        deadEntity.setPathPicture(res + "apple red.png");
         world.setEntity(coordinates1, deadEntity);
         world.GrassEat++;
         satiety = true;
     }                  // Метод реализующий поедание ресурса
     @Override
-    public String getRandomIcon() {
+    public String getRandomIconThisClass() {
         return Icons.HerbIcon [(int) (Math.random() * Icons.HerbIcon.length)];
     }                                         // получить случайную иконку класса
 
     @Override
     public String getRandomImageThisClass() {
-        return "src/main/resources/Picture/cow.png";
+        return res + "cow.png";
     }
 }

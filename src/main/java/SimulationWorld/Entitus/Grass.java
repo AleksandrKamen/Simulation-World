@@ -13,7 +13,7 @@ public class Grass extends Entity{          //Класс реализующий 
         pathPicture = getRandomImageThisClass();
     }
     @Override
-    public String getRandomIcon() {
+    public String getRandomIconThisClass() {
         return Icons.GrassIcon [(int) (Math.random() * Icons.GrassIcon.length)];
     } // Получить случайную иконку
 

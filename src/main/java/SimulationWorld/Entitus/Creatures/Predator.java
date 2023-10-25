@@ -61,7 +61,7 @@ public class Predator extends Creature { // Класс реализующий - 
             if (prey.getClass().getSimpleName().equals("Predator")){
                 world.PredDead++;
             } else world.HerbDead++;
-            Coordinates coordinates1 = prey.coordinates;
+            var coordinates1 = prey.coordinates;
             world.getMapWorld().remove(coordinates1);
             DeadEntity deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[0]);
             deadEntity.setPathPicture(res + "skull.png");
@@ -72,7 +72,7 @@ public class Predator extends Creature { // Класс реализующий - 
     }                                                // напасть  животное
 
     @Override
-    public String getRandomIcon() {
+    public String getRandomIconThisClass() {
         return Icons.PredIcon[(int) (Math.random() * Icons.PredIcon.length)];
     }                                         // получить случайную иконку
 
@@ -81,7 +81,7 @@ public class Predator extends Creature { // Класс реализующий - 
        int random = (int) (Math.random()*2);
        return switch (random){
             case 0 -> res + "tiger.png";
-            case 1->  res + "dragon.png";
+            case 1->  res + "lion.png";
             default -> null;
         };
 

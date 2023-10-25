@@ -47,7 +47,7 @@ public class SwingRender extends RendererMap {
                 Coordinates coordinates = new Coordinates(rank, file);
                 Entity entity = mapWorld.getEntity(coordinates);
                 if (entity != null) {
-                    simulationPanel.add(new EntityContainer(new ImageIcon(entity.pathPicture)));
+                    simulationPanel.add(new EntityContainer(new ImageIcon(entity.getPathPicture())));
                 }
                 else simulationPanel.add(new EntityContainer( new ImageIcon("src/main/resources/Picture/white-large-square.png")));
             }
