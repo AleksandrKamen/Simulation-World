@@ -1,5 +1,7 @@
 package SimulationWorld.Entitus.Creatures;
+import SimulationWorld.Entitus.DeadEntity;
 import SimulationWorld.Entitus.Entity;
+import SimulationWorld.Icon.Icons;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
 import lombok.Getter;
@@ -84,4 +86,12 @@ public abstract class Creature extends Entity {                              // 
         }
         return set;
     } //Метод  возвращает множество  существ рядом с заданной клеткой/координатой
+
+    protected void dead(MapWorld world){
+        Coordinates coordinates1 = coordinates;
+        DeadEntity deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[0]);
+        deadEntity.setPathPicture("src/main/resources/Picture/skull.png");
+        world.getMapWorld().remove(coordinates1);
+        world.setEntity(coordinates1, deadEntity);
+    }
 }

@@ -1,13 +1,14 @@
-package SimulationWorld.Render;
+package SimulationWorld.Render.ConsolRender;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Icon.Icons;
 import SimulationWorld.Map.MapWorld;
+import SimulationWorld.Render.RendererMap;
 import SimulationWorld.Simulation;
 
 import java.io.IOException;
 import java.util.Arrays;
 
-public class Consol_RendererMap  extends RendererMap{ // Класс реализующий отрисовку мира
+public class Consol_RendererMap  extends RendererMap { // Класс реализующий отрисовку мира
 
     public void render(MapWorld map) {
         clrscr();

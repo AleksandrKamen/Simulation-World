@@ -5,13 +5,17 @@ import SimulationWorld.Entitus.Creatures.Predator;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
 
-public class EntityFactory extends Action { // Класс для  создания новых существ
+public class EntityFactory extends Action { // Класс для создания новых существ
 
     public  static  void addMoreEntitys(MapWorld world){
+
         for (int x= 0; x < world.getClasses().length; x++){
             if (world.getRandomCoordinates() == null) break;
             if ((x == 4 || x == 3) && world.getEntityesOfType(world.getClasses()[x]).size() > 1) continue;
-            addEntity(world,world.getClasses()[x]);
+            if (world.getEntityesOfType(world.getClasses()[x]).size() < 5) {
+                addEntity(world, world.getClasses()[x]);
+                addEntity(world, world.getClasses()[x]);
+            }
         }
         }    // Добавляет по объекту каждого класса, кроме гор и деревьев
 

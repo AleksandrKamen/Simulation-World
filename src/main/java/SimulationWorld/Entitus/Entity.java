@@ -1,22 +1,20 @@
 package SimulationWorld.Entitus;
 import SimulationWorld.Map.Coordinates;
-
-import javax.swing.*;
+import lombok.Setter;
 
 public abstract class Entity {       // суперкласс для  всех объектов мира
     public Coordinates coordinates;
     public String icon;
-    public String path;
+   @Setter  public String pathPicture;
+  protected String res = "src/main/resources/Picture/";
 
     public Entity(Coordinates coordinates) {
         this.coordinates = coordinates;
-        this.icon = getRandomIcon();
+        icon = getRandomIcon();
     }
     protected abstract String getRandomIcon(); // Получить случайную иконку
 
-    public ImageIcon getImage() {
-        return new ImageIcon(path);
-    }
+    public abstract String getRandomImageThisClass();
 
 
 }

@@ -32,8 +32,12 @@ public class MapWorld { // Класс реализует карту мира
         return  mapWorld.values().stream().filter(c-> c instanceof Creature).map(c-> (Creature) c) .collect(Collectors.toSet());
     }
     public Set<Coordinates> getAllDead(){
-        return  mapWorld.keySet().stream().filter(c-> getEntity(c).getClass() == DeadCreature.class).collect(Collectors.toSet());
+        return  mapWorld.keySet().stream().filter(c-> getEntity(c).getClass() == DeadEntity.class).collect(Collectors.toSet());
     }
+    public Set<Tree> getAllTree(){
+        return  mapWorld.values().stream().filter(c-> c instanceof Tree).map(c-> (Tree) c) .collect(Collectors.toSet());
+    }
+
     public void removeCreature(Creature creature, Coordinates coordinates) { // Переставить животное
         mapWorld.remove(creature.coordinates);
         setEntity(coordinates, creature);
@@ -42,7 +46,7 @@ public class MapWorld { // Класс реализует карту мира
         var emptySquare = new ArrayList<Coordinates>();
         for (int rank = Coordinates.getMaxSize(); rank >= 1; rank--) {
             for (int file = Coordinates.getMaxSize(); file >=1; file--) {
-                Coordinates coordinates = new Coordinates(file,rank);
+                var coordinates = new Coordinates(file,rank);
                 if (isSquareEmpty(coordinates)) emptySquare.add(coordinates);
             }
         }

@@ -4,7 +4,7 @@ import SimulationWorld.Actions.EntityFactory;
 import SimulationWorld.Icon.Icons;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
-import SimulationWorld.Render.Consol_RendererMap;
+import SimulationWorld.Render.ConsolRender.Consol_RendererMap;
 
 import java.io.*;
 

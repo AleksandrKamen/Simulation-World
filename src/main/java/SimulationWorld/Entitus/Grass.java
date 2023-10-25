@@ -10,9 +10,15 @@ public class Grass extends Entity{          //Класс реализующий 
     public Grass(Coordinates coordinates, int countGrass) {
         super(coordinates);
         this.countGrass = countGrass;
+        pathPicture = getRandomImageThisClass();
     }
     @Override
     public String getRandomIcon() {
         return Icons.GrassIcon [(int) (Math.random() * Icons.GrassIcon.length)];
     } // Получить случайную иконку
+
+    @Override
+    public String getRandomImageThisClass() {
+        return res + "apple_red_full.png";
+    }
 }
