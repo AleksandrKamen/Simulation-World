@@ -22,14 +22,19 @@ Swing реализация -
 Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Herb.png)  При атаки хищника истекает кровью. ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Herb2.png) 
  ## Статические классы
  **Grass** - класс реализующий - ресурс для травоядных животных, обладает показателем питательности. 
- ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Grass.png) 
+ 
+  Swing реализация -  
+  
+ Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Grass.png) 
  
  **Tree** - класс реализующий  статический объект – дерево, занимает клетку на поле. 
+ 
  Swing реализация -  
  
  Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Tree.png) 
  
  **Rock** - класс реализующий  статический объект - гора , занимает клетку на поле. 
+ 
  Swing реализация -  
  
  Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/rook.png) 
