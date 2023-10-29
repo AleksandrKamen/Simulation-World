@@ -6,8 +6,6 @@ import SimulationWorld.Icon.Icons;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
 
-import java.util.List;
-
 public class Predator extends Creature { // Класс реализующий - хищное животное
     private final Integer attackPower;
 
@@ -40,9 +38,7 @@ public class Predator extends Creature { // Класс реализующий - 
 
     public <T extends Creature> void eat(T prey, MapWorld world) {
         prey.HP -= attackPower;
-        if (!prey.icon.contains(Icons.otherIcons[0])) {
-            prey.icon += Icons.otherIcons[0];  // Если хищник напал на жертву - дополняет иконку жертвы 🩸
-        }
+        prey.icon = prey.icon.contains(Icons.otherIcons[0])?prey.icon: prey.icon + Icons.otherIcons[0];
         HP += prey.HP <= 0 ? attackPower + prey.HP : attackPower;
         prey.setPathPicture(res + "cowAndBlood.png");
         if (prey.HP <=0){

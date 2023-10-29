@@ -23,8 +23,6 @@ public abstract class Creature extends Entity {                              // 
         satiety = false;
         HP--;
     }                  // Метод реализующий ход живтоного (общее для класса Predator и Herbivore
-
-
     public ArrayList<Coordinates> path(MapWorld map, Class target) {
         boolean flagExit = false;                // - Досрочный воход из цикла(Если нашли что искали)
         var lineOfCellsArray = new LinkedList<ArrayList<Coordinates>>(); // - очередь из путей к цели
@@ -89,8 +87,8 @@ public abstract class Creature extends Entity {                              // 
 
     protected void dead(MapWorld world){
         var coordinates1 = coordinates;
-        DeadEntity deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[0]);
-        deadEntity.setPathPicture("src/main/resources/Picture/skull.png");
+        var deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[0]);
+        deadEntity.setPathPicture(res + "skull.png");
         world.getMapWorld().remove(coordinates1);
         world.setEntity(coordinates1, deadEntity);
     }

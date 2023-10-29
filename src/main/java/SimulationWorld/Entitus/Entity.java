@@ -1,4 +1,5 @@
 package SimulationWorld.Entitus;
+
 import SimulationWorld.Map.Coordinates;
 import lombok.Getter;
 import lombok.Setter;

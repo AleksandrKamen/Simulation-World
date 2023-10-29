@@ -32,7 +32,7 @@ public class EntityFactory extends Action { // Класс для создани�
             case "Grass" -> new Grass(coordinates, hp);
             case "Rock" -> new Rock(coordinates);
             case "Tree" -> new Tree(coordinates);
-            default -> throw new IllegalArgumentException("Указан некорректный класс");
+            default -> throw new IllegalArgumentException("Invalid class");
         };
         world.setEntity(coordinates,entity);
     }

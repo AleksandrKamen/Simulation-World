@@ -34,7 +34,7 @@ public class Herbivore extends Creature { // Класс реализующий -
         HP += grass.countGrass;
         var coordinates1 = grass.coordinates;
         world.getMapWorld().remove(coordinates1);
-        DeadEntity deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[1]);
+        var deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[1]);
         deadEntity.setPathPicture(res + "apple red.png");
         world.setEntity(coordinates1, deadEntity);
         world.GrassEat++;
