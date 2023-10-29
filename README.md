@@ -11,9 +11,7 @@
 ##                                                   **Классы животных** 
   **Predator** - класс реализующий - хищное животное, обладает показателями скорости передвижения, количеством здоровья, сытости и силой атаки.  **Функциональные возможности** – при наличии рядом травоядного, атакует его, иначе передвигается к ближайшему. В отсутствии травоядных атакует другого хищника
   
-Swing реализация -  
-
-Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Predator.png)  
+Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/lion.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/tiger.png)  
 
  **Herbivore** - класс реализующий – травоядное животное, обладает показателями скорости передвижения, сытости и количеством здоровья.  **Функциональные возможности** – при наличии рядом ресурса, съедает его, увеличивая свое HP  иначе передвигается к ближайшему.
  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/cow.png)  При атаки хищника истекает кровью.  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/blood2.png) 
