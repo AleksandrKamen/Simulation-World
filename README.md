@@ -14,6 +14,10 @@
  **Herbivore** - класс реализующий – травоядное животное, обладает показателями скорости передвижения, сытости и количеством здоровья.  **Функциональные возможности** – при наличии рядом ресурса, съедает его, увеличивая свое HP  иначе передвигается к ближайшему.
  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/cow.png)  При атаки хищника истекает кровью.  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/blood2.png) 
  
+ 
+ ##                                                   **Класс Human**
+Класс реализующий охотника. Охотится на класс Predator.
+ 
  ## Статические классы
  **Grass** - класс реализующий - ресурс для травоядных животных, обладает показателем питательности. 
  
