@@ -35,7 +35,7 @@ Swing реализация -
   Swing реализация -  
   
  Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/ch2.png) 
-                          ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/skull.png) 
+                          ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/ch.png) 
 ## Пользовательский интерфейс  и возможности 
 Swing реализация -  
 
