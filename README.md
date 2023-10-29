@@ -17,9 +17,7 @@
  ## Статические классы
  **Grass** - класс реализующий - ресурс для травоядных животных, обладает показателем питательности. 
  
-  Swing реализация -  
-  
- Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Grass.png) 
+![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/apple_red.png) 
  
  **Tree** - класс реализующий  статический объект – дерево, занимает клетку на поле. 
  
