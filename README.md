@@ -31,7 +31,6 @@
  **Rock** - класс реализующий  статический объект - гора , занимает клетку на поле. 
  
 ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/rock.png) 
- 
  **DeadCreature** – класс реализующий мертвый/съеденный/убитый объект, отображается 1 ход 
 ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/skull.png) ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/tiger_sh.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/lion_sh.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/deadtree2.png)  
 
