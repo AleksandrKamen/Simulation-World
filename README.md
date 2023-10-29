@@ -33,14 +33,10 @@
 ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/rock.png) 
  
  **DeadCreature** – класс реализующий мертвый/съеденный объект, отображается 1 ход 
-  Swing реализация -  
-  
- Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/ch2.png) 
-                          ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/ch.png) 
-## Пользовательский интерфейс  и возможности 
-Swing реализация -  
+![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/skull.png) ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/tiger_sh.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/lion_sh.png)  
 
-Консольная реализация -
+## Пользовательский интерфейс  и возможности 
+
 Взаимодействие с пользователем реализовано через выбор действия (1-6).
  
  
