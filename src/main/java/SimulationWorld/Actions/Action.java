@@ -1,8 +1,6 @@
 package SimulationWorld.Actions;
 
 import SimulationWorld.Entitus.Creatures.Creature;
-import SimulationWorld.Entitus.Tree;
-import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
 import SimulationWorld.Render.RendererMap;
 import SimulationWorld.Render.SwingRender.SwingRender;
@@ -26,20 +24,11 @@ public abstract class Action {          // Абстрактный класс р�
         }
     }
     public static void clearMap(MapWorld world){
-        for (Coordinates coordinates : world.getAllDead()) {
-            world.getMapWorld().remove(coordinates);
-        }
-        for (Tree tree : world.getAllTree()) {
-            if (tree.getTime() < 1)
-            world.getMapWorld().remove(tree.coordinates);
-        }
-
+        world.getAllDead().stream().forEach(dead -> world.getMapWorld().remove(dead));
+        world.getAllTree().stream().filter(tree -> tree.getTime() < 1).forEach(tree -> world.getMapWorld().remove(tree.coordinates));
     }
     public static void changeTree(MapWorld world){
-        for (Tree tree : world.getAllTree()) {
-            tree.agingTree();
-        }
-
+        world.getAllTree().forEach(tree -> tree.agingTree());
     }
 
     public static void render(MapWorld world){
