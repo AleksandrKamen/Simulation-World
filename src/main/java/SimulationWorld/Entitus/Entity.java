@@ -7,7 +7,7 @@ public abstract class Entity {       // суперкласс для  всех о
     public Coordinates coordinates;
     public String icon;
   @Setter @Getter  protected String pathPicture;
-  @Getter protected String res = "src/main/resources/Picture/";
+  protected String res = "src/main/resources/Picture/";
 
     public Entity(Coordinates coordinates) {
         this.coordinates = coordinates;

@@ -12,16 +12,16 @@ public class EntityFactory extends Action { // Класс для создани�
     public  static  void addMoreEntitys(MapWorld world){
         int quantityBefore = world.getMapWorld().size();
         for (int x= 0; x < world.getClasses().length; x++){
+            var entityCalss = world.getClasses()[x];
             if (world.getRandomCoordinates() == null) break;
-            if ((x == 4 || x == 3) && world.getEntityesOfType(world.getClasses()[x]).size() > 2) continue;
-            if (world.getEntityesOfType(world.getClasses()[x]).size() < 5) {
-                addEntity(world, world.getClasses()[x]);
-                addEntity(world, world.getClasses()[x]);
+            if ((x == 4 || x == 3) && world.getEntityesOfType(entityCalss).size() > 2) continue;
+            if (world.getEntityesOfType(entityCalss).size() < 5) {
+                addEntity(world, entityCalss);
+                addEntity(world, entityCalss);
             }
         }
-        int quantityAfter = world.getMapWorld().size();
-        log.info(String.format("%d objects added",quantityAfter-quantityBefore));
-        }    // Добавляет по объекту каждого класса, кроме гор и деревьев
+        log.info(String.format("%d objects added",world.getMapWorld().size()-quantityBefore));
+        }
 
     public static  <T extends Entity> void addEntity(MapWorld world, Class<T> type) {
         int hp = (int) (1 + Math.random() * 8), power = (int) (1 + Math.random() * 3);
@@ -35,5 +35,5 @@ public class EntityFactory extends Action { // Класс для создани�
             default -> throw new IllegalArgumentException("Указан некорректный класс");
         };
         world.setEntity(coordinates,entity);
-    } // Добавляет объект  указанного класса
+    }
 }

@@ -19,7 +19,7 @@ public class Simulation { // Класс реализуюший симуляци�
 
     @SneakyThrows
     public static void nextTurn() {
-//        Action.checkPopulation(world);
+        Action.checkPopulation(world);
         Action.moveAllCreature(world);
         Action.changeTree(world);
         Action.render(world);
