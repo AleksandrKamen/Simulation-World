@@ -11,7 +11,7 @@ public class EntityFactory extends Action { // Класс для создани�
 
         for (int x= 0; x < world.getClasses().length; x++){
             if (world.getRandomCoordinates() == null) break;
-            if ((x == 4 || x == 3) && world.getEntityesOfType(world.getClasses()[x]).size() > 1) continue;
+            if ((x == 4 || x == 3) && world.getEntityesOfType(world.getClasses()[x]).size() > 2) continue;
             if (world.getEntityesOfType(world.getClasses()[x]).size() < 5) {
                 addEntity(world, world.getClasses()[x]);
                 addEntity(world, world.getClasses()[x]);

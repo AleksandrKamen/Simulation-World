@@ -1,8 +1,13 @@
 package SimulationWorld.Render.SwingRender;
 
 
+import SimulationWorld.Actions.Action;
 import SimulationWorld.Actions.EntityFactory;
+import SimulationWorld.Entitus.Creatures.Herbivore;
+import SimulationWorld.Entitus.Creatures.Predator;
+import SimulationWorld.Entitus.Grass;
 import SimulationWorld.Entitus.Rock;
+import SimulationWorld.Entitus.Tree;
 import SimulationWorld.Simulation;
 
 import javax.swing.*;
@@ -12,25 +17,37 @@ public class ButtomPanel extends JPanel {
     private final JButton start = new JButton("start");
     private final JButton pause = new JButton("pause");
     private final JButton nextTurn = new JButton("next turn");
-    private final JButton moreRock = new JButton("More rock!!!");
+    private final JButton moreRock = new JButton("Rock+");
+    private final JButton moreHerbivore = new JButton("Herbivore+");
+    private final JButton morePredator = new JButton("Predator+");
+    private final JButton moreTree = new JButton("Tree+");
+    private final JButton moreGrass = new JButton("Grass+");
 
 
     public ButtomPanel(){
-        this.add(start);
-        this.add(pause);
-        this.add(nextTurn);
-        this.add(moreRock);
+        add(start);
+        add(pause);
+        add(nextTurn);
+        add(moreRock);
+        add(moreHerbivore);
+        add(morePredator);
+        add(moreTree);
+        add(moreGrass);
 
-        this.setBackground(Color.LIGHT_GRAY); // Устанавливает серый цвет фона
-        this.setPreferredSize(new Dimension(300, 35)); // Устанавливает размер, setPreferredSize - используйте, когда существует родительский менеджер компоновки.
-        this.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5)); // Устанавливаем компановку
-        this.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT); // Устанавливаем ориннтацию
+
+        setBackground(Color.LIGHT_GRAY);
+        setPreferredSize(new Dimension(300, 35));
+        setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 
         turnNextButtomCliced();
         startSimulationButtomCliked();
         pauseSimulationButtomCliked();
         moreRock();
-
+        moreHerbivore();
+        morePredator();
+        moreTree();
+        moreGrass();
     }
 
     public void turnNextButtomCliced(){
@@ -38,12 +55,39 @@ public class ButtomPanel extends JPanel {
     }
 
     public void moreRock(){
-        moreRock.addActionListener(e-> EntityFactory.addEntity(Simulation.getWorld(), Rock.class));
+        moreRock.addActionListener(e-> {
+            EntityFactory.addEntity(Simulation.getWorld(), Rock.class);
+            Action.render(Simulation.getWorld());
+        });
+    }
+    public void moreHerbivore(){
+        moreHerbivore.addActionListener(e-> {
+            EntityFactory.addEntity(Simulation.getWorld(), Herbivore.class);
+            Action.render(Simulation.getWorld());
+        });
+    }
+    public void morePredator(){
+        morePredator.addActionListener(e-> {
+            EntityFactory.addEntity(Simulation.getWorld(), Predator.class);
+            Action.render(Simulation.getWorld());
+        });
+    }
+    public void moreTree(){
+        moreTree.addActionListener(e-> {
+            EntityFactory.addEntity(Simulation.getWorld(), Tree.class);
+            Action.render(Simulation.getWorld());
+        });
+    }
+    public void moreGrass(){
+        moreGrass.addActionListener(e-> {
+            EntityFactory.addEntity(Simulation.getWorld(), Grass.class);
+            Action.render(Simulation.getWorld());
+        });
     }
     public void startSimulationButtomCliked(){
         start.addActionListener(e -> {
             start.setEnabled(false);
-            new StartButtonWorker().execute(); //метод вызывается в этом потоке. Он планирует SwingWorker выполнение в рабочем потоке и немедленно возвращает результат.
+            new StartButtonWorker().execute();
         });
     }
 
@@ -55,7 +99,7 @@ public class ButtomPanel extends JPanel {
 
 
         @Override
-        protected Void doInBackground()  { // метод вызывается в этом потоке. Здесь должны происходить все фоновые действия.
+        protected Void doInBackground()  {
             Simulation.startSimulation();
             return null;
         }

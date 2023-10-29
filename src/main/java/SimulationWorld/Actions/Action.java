@@ -21,7 +21,7 @@ public abstract class Action {          // Абстрактный класс р�
     } // Метод - активирует makeMove для всех животных и убирет мертвые объекты с карты
 
     public static void checkPopulation(MapWorld world){
-        if (world.getMapWorld().size() < 20) {
+        if (world.getMapWorld().size() < 25) {
             EntityFactory.addMoreEntitys(world);
         }
     }
