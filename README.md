@@ -23,20 +23,25 @@ Swing реализация -
  
  **Tree** - класс реализующий  статический объект – дерево, занимает клетку на поле. 
  Swing реализация -  
+ 
  Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Tree.png) 
  
  **Rock** - класс реализующий  статический объект - гора , занимает клетку на поле. 
  Swing реализация -  
+ 
  Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/rook.png) 
  
  **DeadCreature** – класс реализующий мертвый/съеденный объект, отображается 1 ход ![Image alt](https://github.com/AleksandrKamen/Simulation-
  Swing реализация -  
- Консольная реализация - World/blob/master/Picture/ch.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/ch2.png) 
- ## Пользовательский интерфейс  и возможности 
- Взаимодействие с пользователем реализовано через выбор действия (1-6).
- Swing реализация -  
+ Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/ch2.png) 
+## Пользовательский интерфейс  и возможности 
+Swing реализация -  
+
+Консольная реализация -
+Взаимодействие с пользователем реализовано через выбор действия (1-6).
  
- Консольная реализация - <p align="center"> <img width="500" height="300" src = https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/1.png> </p>
+ 
+  <p align="center"> <img width="500" height="300" src = https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/1.png> </p>
   
  **1.Установка размера мира(карты)**  – отрисовка пустого мира, заданного размера.
   
