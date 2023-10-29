@@ -21,12 +21,10 @@
  
  ## Статические классы
  **Grass** - класс реализующий - ресурс для травоядных животных, обладает показателем питательности. 
- 
-![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/apple_red.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/apple_red_full.png) 
+ ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/apple_red.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/apple_red_full.png) 
  
  **Tree** - класс реализующий  статический объект – дерево, занимает клетку на поле. После определенного времени начинает стареть, пока не исчезнет.
- 
- ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/tree.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/treeSpring.png) 
+  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/tree.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/treeSpring.png) 
  
  **Rock** - класс реализующий  статический объект - гора , занимает клетку на поле. 
 ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/rock.png) 
