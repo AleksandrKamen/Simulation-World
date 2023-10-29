@@ -6,8 +6,8 @@ import SimulationWorld.Render.RendererMap;
 import SimulationWorld.Render.SwingRender.SwingRender;
 import lombok.SneakyThrows;
 
-public abstract class Action {          // Абстрактный класс реализующий деяствия над миром
-     public static RendererMap rendererMap = new SwingRender();
+public abstract class Action {
+     private final static RendererMap rendererMap = new SwingRender();
 
     @SneakyThrows
     public static void moveAllCreature(MapWorld world) {
@@ -16,7 +16,7 @@ public abstract class Action {          // Абстрактный класс р�
              Action.render(world);
              Thread.sleep(200);
         }
-    } // Метод - активирует makeMove для всех животных и убирет мертвые объекты с карты
+    }
 
     public static void checkPopulation(MapWorld world){
         if (world.getMapWorld().size() < 25) {
@@ -27,7 +27,7 @@ public abstract class Action {          // Абстрактный класс р�
         world.getAllDead().stream().forEach(dead -> world.getMapWorld().remove(dead));
         world.getAllTree().stream().filter(tree -> tree.getTime() < 1).forEach(tree -> world.getMapWorld().remove(tree.coordinates));
     }
-    public static void changeTree(MapWorld world){
+    public static void changeTrees(MapWorld world){
         world.getAllTree().forEach(tree -> tree.agingTree());
     }
 

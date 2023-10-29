@@ -1,6 +1,6 @@
 package SimulationWorld.Icon;
 
-public class Icons { //Класс реализующий изображения объектов на карте
+public class Icons {
     public static final String[] PredIcon = new String[]{"🐊", "🐆", "🐅", "🐉"};
     public static final String[] RockIcon = new String[]{"🗻"};
     public static final String[] TreeIcon = new String[]{"🌳", "🌲", "🌴", " 🌵"};

@@ -8,7 +8,7 @@ import SimulationWorld.Map.MapWorld;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
-public class EntityFactory extends Action { // Класс для создания новых существ
+public class EntityFactory extends Action {
 
     public  static  void addMoreEntitys(MapWorld world){
         int quantityBefore = world.getMapWorld().size();

@@ -8,12 +8,12 @@ import SimulationWorld.Render.ConsolRender.Consol_RendererMap;
 
 import java.io.*;
 
-public class UsersInterface {                    // Класс реализиющий пользовательский ввод
-    private static boolean gameOver = false;    // флаг для выхода
+public class UsersInterface {
+    private static boolean gameOver = false;
     Simulation simulation = new Simulation();
     Consol_RendererMap consolRendererMap = new Consol_RendererMap();
 
-    public void output() throws IOException, InterruptedException {
+    public void output() throws IOException {
         System.out.printf("%s\n%s\n%1$s\n", "-".repeat(40), "Добрый день! Вас приветствует симуляция!");
         var reader = new BufferedReader(new InputStreamReader(System.in));
         while (gameOver == false) {
@@ -25,7 +25,7 @@ public class UsersInterface {                    // Класс реализию�
                     "|5.Показать статистику мира " +Icons.usersIcon[5]+"\n"  +
                     "|6.Выйти из симуляции " + Icons.usersIcon[6]+"\n");
             String answer = reader.readLine();
-            if (!answer.matches("[1-6]")) {                        // Ограничение на выбор 1-6
+            if (!answer.matches("[1-6]")) {
                 System.out.println("Некорректный ввод - пожайлуста повторите");
                 continue;
             } // Проверка корректности ввода
@@ -33,7 +33,7 @@ public class UsersInterface {                    // Класс реализию�
                 simulation.world = new MapWorld();
                 System.out.println("Укажите размер карты - сторону квадрата");
                 String size = reader.readLine();
-                while (!size.matches("[1-9]{1}[0-9]?")) {                  // Ограничение на размер карты 1-99
+                while (!size.matches("[1-9]{1}[0-9]?")) {
                     System.out.println("Некорректно задан размер карты - повторите");
                     size = reader.readLine();
                 }
@@ -57,7 +57,7 @@ public class UsersInterface {                    // Класс реализию�
                 }
                 System.out.println("Сколько ходов совершить?");
                 String steps = reader.readLine();
-                while (!steps.matches("^[1-9]{1}[0-9]?$")) {                                // Ограничение на кол-во ходов 1-99
+                while (!steps.matches("^[1-9]{1}[0-9]?$")) {
                     System.out.println("Пожайлуста введите число ходов");
                     steps = reader.readLine();
                 }
@@ -74,5 +74,5 @@ public class UsersInterface {                    // Класс реализию�
         }
         System.out.printf("%s\n%33s\n%1$s\n", "-".repeat(40), "Cимуляция прощается с вами!");
         reader.close();
-    }                                                                                // Запустить пользовательский интерфейс
+    }
 }

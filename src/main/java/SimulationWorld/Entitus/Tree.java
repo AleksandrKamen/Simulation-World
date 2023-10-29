@@ -4,7 +4,7 @@ import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Icon.Icons;
 import lombok.Getter;
 
-public class Tree extends Entity{ //Класс реализующий  статический объект - дерево
+public class Tree extends Entity{
 @Getter private int time;
 
     public Tree(Coordinates coordinates) {
@@ -22,7 +22,7 @@ public class Tree extends Entity{ //Класс реализующий  стат�
     @Override
     public String getRandomIconThisClass() {
         return Icons.TreeIcon [(int) (Math.random() * Icons.TreeIcon.length)];
-    } //получить случайную иконку
+    }
 
     @Override
     public String getRandomImageThisClass() {

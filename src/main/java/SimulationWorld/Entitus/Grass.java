@@ -3,9 +3,8 @@ import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Icon.Icons;
 import lombok.Getter;
 
-public class Grass extends Entity{          //Класс реализующий -  ресурс для травоядных животных
-    @Getter
-    public int countGrass;     // Показатель ресурса
+public class Grass extends Entity{
+    @Getter private int countGrass;
 
     public Grass(Coordinates coordinates, int countGrass) {
         super(coordinates);
@@ -15,7 +14,7 @@ public class Grass extends Entity{          //Класс реализующий 
     @Override
     public String getRandomIconThisClass() {
         return Icons.GrassIcon [(int) (Math.random() * Icons.GrassIcon.length)];
-    } // Получить случайную иконку
+    }
 
     @Override
     public String getRandomImageThisClass() {

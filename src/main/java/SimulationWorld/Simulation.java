@@ -8,9 +8,9 @@ import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
-public class Simulation { // Класс реализуюший симуляцию мира
-    private static boolean stop = false;                                 // Флаг для паузы симуляции
-    @Getter private static int moveCount = 1;                           // Счетчик ходов и getter счетчика ходов
+public class Simulation {
+    private static boolean stop = false;
+    @Getter private static int moveCount = 1;
     Simulation(){
         Coordinates.setMaxSize(15);
         Action.render(Simulation.world);
@@ -21,12 +21,17 @@ public class Simulation { // Класс реализуюший симуляци�
     public static void nextTurn() {
         Action.checkPopulation(world);
         Action.moveAllCreature(world);
-        Action.changeTree(world);
+        Action.changeTrees(world);
         Action.render(world);
         Action.clearMap(world);
-        log.info("Next turn - Move №" + moveCount++);
+        log.info(String.format("""
+                               Next turn - Move № %d
+                               Predators died - %d
+                               Herbivores died - %d
+                               Grass eaten - %d           
+                               """,moveCount++,world.PredDead,world.HerbDead,world.GrassEat));
         Thread.sleep(1000);
-    } // Метод - симуляция 1 хода и его отрисовка
+    }
 
     public static void startSimulation(int count) {
         moveCount = 1;
@@ -35,7 +40,7 @@ public class Simulation { // Класс реализуюший симуляци�
             nextTurn();
             pauseSimulationAfterCountSteps(count);
         }
-    }                                                  // метод запускает симуляцию на указанное кол-во ходов
+    }
     public static void startSimulation(){
         log.info("Start Simulation");
         stop = false;
@@ -46,7 +51,7 @@ public class Simulation { // Класс реализуюший симуляци�
 
     public static void pauseSimulationAfterCountSteps(int count) {
         stop = count == moveCount?true:false;
-    } // метод для приостаноки цикла симуляции
+    }
 
     public static void stopSimulation(){
         stop = true;

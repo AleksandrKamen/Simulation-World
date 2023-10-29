@@ -4,7 +4,7 @@ import SimulationWorld.Map.Coordinates;
 import lombok.Getter;
 import lombok.Setter;
 
-public abstract class Entity {       // суперкласс для  всех объектов мира
+public abstract class Entity {
     public Coordinates coordinates;
     public String icon;
   @Setter @Getter  protected String pathPicture;
@@ -14,7 +14,7 @@ public abstract class Entity {       // суперкласс для  всех о
         this.coordinates = coordinates;
         icon = getRandomIconThisClass();
     }
-    protected abstract String getRandomIconThisClass(); // Получить случайную иконку
+    protected abstract String getRandomIconThisClass();
 
     public abstract String getRandomImageThisClass();
 

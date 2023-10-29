@@ -1,7 +1,7 @@
 package SimulationWorld.Entitus;
 import SimulationWorld.Map.Coordinates;
 
-public class DeadEntity extends Entity{ // Класс реализует мертвый/съеденный объект
+public class DeadEntity extends Entity{
 
     public DeadEntity(Coordinates coordinates, String icon) {
         super(coordinates);
@@ -9,7 +9,7 @@ public class DeadEntity extends Entity{ // Класс реализует мер�
     }
 
     @Override
-    protected String getRandomIconThisClass() {return "";} // Получить случайную иконку
+    protected String getRandomIconThisClass() {return "";}
 
     @Override
     public String getRandomImageThisClass() {

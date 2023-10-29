@@ -11,27 +11,27 @@ public class SwingRender extends RendererMap {
     private final MapPanel simulationPanel = new MapPanel();
 
     public SwingRender(){
-        JFrame window = new JFrame();                          // Создает окно
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Завершает работу  при закрытии
-        window.setResizable(false);                           // Запрет на изменение окна
-        window.setTitle("Simulation world project");                      // Устанавливает название
+        JFrame window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
+        window.setTitle("Simulation world project");
 
-        window.setLayout(new GridBagLayout());               // Устанавливает компановку - размещение в двухмерной сетке
+        window.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
 
-        constraints.fill = GridBagConstraints.BOTH;      // fill – определяет будет ли компонент заполнять все пространство ячейки, и если будет, то как. - заполняет как вертикально так и горизонтально
-        constraints.gridy = 0;                          //Поля gridx и gridy задают, соответственно, номер столбца и номер строки для ячейки, в которую будет помещен компонент.
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.gridy = 0;
         window.add(simulationPanel, constraints);
 
-        constraints.fill = GridBagConstraints.BOTH;   // fill – определяет будет ли компонент заполнять все пространство ячейки, и если будет, то как.
-        constraints.gridy = 1;                       //Указывает ячейку в верхней части области отображения компонента, где самая верхняя ячейка имеет gridy=0.
-        constraints.weightx = 1;                    // 1.0 означает, что по мере роста кадра компоненты получают все дополнительное пространство
-        constraints.anchor = GridBagConstraints.PAGE_END; // anchor – поле, значение которого указывает к какому краю ячейки следует «прилепиться» компоненту. Поместите компонент по центру края его области отображения, связанной с концом страницы текущего файла ComponentOrientation.
-        window.add(new ButtomPanel(), constraints); // Добовляем ButtonsPanel по значениям constraints
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.gridy = 1;
+        constraints.weightx = 1;
+        constraints.anchor = GridBagConstraints.PAGE_END;
+        window.add(new ButtomPanel(), constraints);
 
-        window.pack(); // устанавливает такой минимальный размер контейнера, который достаточен для отображения всех компонентов
-        window.setLocationRelativeTo(null); //Устанавливает окно по центру экрана
-        window.setVisible(true);                    // Делае видимым
+        window.pack();
+        window.setLocationRelativeTo(null);
+        window.setVisible(true);
 
     }
 

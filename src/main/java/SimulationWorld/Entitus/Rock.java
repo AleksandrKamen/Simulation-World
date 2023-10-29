@@ -2,7 +2,7 @@ package SimulationWorld.Entitus;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Icon.Icons;
 
-public class Rock extends Entity{   //Класс реализующий  статический объект - гора
+public class Rock extends Entity{
     public Rock(Coordinates coordinates) {
         super(coordinates);
         pathPicture = getRandomImageThisClass();
@@ -16,11 +16,5 @@ public class Rock extends Entity{   //Класс реализующий  ста�
     @Override
     public String getRandomImageThisClass() {
         return res + "rock.png";
-//        int random = (int) (Math.random()*2);
-//        return switch (random){
-//            case 0 -> res + "rock2.png";
-//            case 1-> res + "rock.png";
-//            default -> null;
-//        };
     }
 }

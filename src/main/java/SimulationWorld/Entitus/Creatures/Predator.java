@@ -19,7 +19,7 @@ public class Predator extends Creature { // Класс реализующий - 
     public void makeMove(MapWorld map) {
         super.makeMove(map);
         if (HP < 0) {
-            dead(map);
+            deadCreature(map);
             map.PredDead++;
         } else {
              for (Entity e : getnearEntity(map))                           // Если по пблизости есть травоядное - нападает

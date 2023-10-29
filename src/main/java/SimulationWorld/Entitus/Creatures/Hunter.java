@@ -22,13 +22,13 @@ public class Hunter extends Creature {
 
     @Override
     public void makeMove(MapWorld map) {
-        for (Entity e : getnearEntity(map))                           // Если по пблизости есть травоядное - нападает
+        for (Entity e : getnearEntity(map))
             if (e instanceof Predator) {
-                eatPred((Predator) e, map);
+                shootPredator((Predator) e, map);
                 break;
             }
 
-            if (!satiety && !map.getEntityesOfType(Predator.class).isEmpty()) { // Если по близости травоядного не оказалось - двигаться в направлении ближайшего
+            if (!satiety && !map.getEntityesOfType(Predator.class).isEmpty()) {
                 var path = finder.path(coordinates,map, Predator.class);
                 map.removeCreature(this, path.get(speed));
             }
@@ -36,7 +36,7 @@ public class Hunter extends Creature {
     }
 
     @SneakyThrows
-    public void eatPred(Predator predator, MapWorld world) {
+    public void shootPredator(Predator predator, MapWorld world) {
         String skin = predator.getPathPicture().contains("tiger.png")?res + "tiger_sh.png":res +"lion_sh.png";
         var coordinates1 = predator.coordinates;
         world.getMapWorld().remove(coordinates1);
