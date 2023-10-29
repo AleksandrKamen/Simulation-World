@@ -15,11 +15,12 @@ public class Rock extends Entity{   //Класс реализующий  ста�
 
     @Override
     public String getRandomImageThisClass() {
-        int random = (int) (Math.random()*2);
-        return switch (random){
-            case 0 -> res + "rock2.png";
-            case 1-> res + "rock.png";
-            default -> null;
-        };
+        return res + "rock.png";
+//        int random = (int) (Math.random()*2);
+//        return switch (random){
+//            case 0 -> res + "rock2.png";
+//            case 1-> res + "rock.png";
+//            default -> null;
+//        };
     }
 }

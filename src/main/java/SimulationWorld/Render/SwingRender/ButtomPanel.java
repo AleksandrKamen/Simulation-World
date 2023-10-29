@@ -16,9 +16,9 @@ import javax.swing.*;
 import java.awt.*;
 @Log4j
 public class ButtomPanel extends JPanel {
-    private final JButton start = new JButton("start");
-    private final JButton pause = new JButton("pause");
-    private final JButton nextTurn = new JButton("next turn");
+    private final JButton start = new JButton("Start");
+    private final JButton pause = new JButton("Pause");
+    private final JButton nextTurn = new JButton("Next turn");
     private final JButton moreRock = new JButton("Rock+");
     private final JButton moreHerbivore = new JButton("Herbivore+");
     private final JButton morePredator = new JButton("Predator+");
@@ -27,6 +27,14 @@ public class ButtomPanel extends JPanel {
 
 
     public ButtomPanel(){
+        start.setToolTipText("Start Simulation");
+        pause.setToolTipText("Pause Simulation");
+        nextTurn.setToolTipText("Start a new tour");
+        moreRock.setToolTipText("Add one rock");
+        moreHerbivore.setToolTipText("Add one Herbivore");
+        morePredator.setToolTipText("Add one Predator");
+        moreTree.setToolTipText("Add one Tree");
+        moreGrass.setToolTipText("Add one Grass");
         add(start);
         add(pause);
         add(nextTurn);

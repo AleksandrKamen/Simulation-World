@@ -29,8 +29,8 @@ public class Predator extends Creature { // Класс реализующий - 
                 }
             if (!satiety) {
                 if (!map.getEntityesOfType(Herbivore.class).isEmpty()) { // Если по близости травоядного не оказалось - двигаться в направлении ближайшего
-                    var list = finder.path(coordinates,map, Herbivore.class);
-                    map.removeCreature(this, list.get(speed));
+                    var path = finder.path(coordinates,map, Herbivore.class);
+                    map.removeCreature(this, path.get(speed));
                 }
             }
         }

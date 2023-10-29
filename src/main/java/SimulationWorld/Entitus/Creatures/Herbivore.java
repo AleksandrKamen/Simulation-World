@@ -24,8 +24,8 @@ public class Herbivore extends Creature { // Класс реализующий -
                     break;
                 }
             if (!satiety && !map.getEntityesOfType(Grass.class).isEmpty()) {    // Если по близости ресурса не оказалось - двигаться в направлении ближайшего
-                var list = finder.path(coordinates,map, Grass.class);
-                map.removeCreature(this, list.get(speed));
+                var path = finder.path(coordinates,map, Grass.class);
+                map.removeCreature(this, path.get(speed));
             }
 
         }

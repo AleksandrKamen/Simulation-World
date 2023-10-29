@@ -1,8 +1,8 @@
 package SimulationWorld.Entitus.Creatures;
 import SimulationWorld.Entitus.DeadEntity;
 import SimulationWorld.Entitus.Entity;
-import SimulationWorld.Entitus.PathFinder.BFSPathFinder;
-import SimulationWorld.Entitus.PathFinder.PathFinder;
+import SimulationWorld.Entitus.Creatures.PathFinder.BFSPathFinder;
+import SimulationWorld.Entitus.Creatures.PathFinder.PathFinder;
 import SimulationWorld.Icon.Icons;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
@@ -14,7 +14,7 @@ public abstract class Creature extends Entity {                              // 
     protected final Integer speed;                                          // скорость - количество клеток за ход
     @Getter protected Integer HP;                                           // показатель количества жизни и getter
     protected boolean satiety = false;                                    // показатель сытости
-    PathFinder finder = new BFSPathFinder();
+    protected final PathFinder finder = new BFSPathFinder();
 
 
     public Creature(Coordinates coordinates, Integer speed, Integer HP) {

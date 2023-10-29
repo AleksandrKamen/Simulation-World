@@ -1,4 +1,4 @@
-package SimulationWorld.Entitus.PathFinder;
+package SimulationWorld.Entitus.Creatures.PathFinder;
 
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;

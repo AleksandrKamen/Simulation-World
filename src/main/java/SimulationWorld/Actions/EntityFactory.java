@@ -1,6 +1,7 @@
 package SimulationWorld.Actions;
 import SimulationWorld.Entitus.*;
 import SimulationWorld.Entitus.Creatures.Herbivore;
+import SimulationWorld.Entitus.Creatures.Hunter;
 import SimulationWorld.Entitus.Creatures.Predator;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
@@ -11,10 +12,14 @@ public class EntityFactory extends Action { // Класс для создани�
 
     public  static  void addMoreEntitys(MapWorld world){
         int quantityBefore = world.getMapWorld().size();
+        if (world.getEntityesOfType(Hunter.class).size() < 2) {
+            addEntity(world, Hunter.class);
+            addEntity(world, Hunter.class);
+        }
         for (int x= 0; x < world.getClasses().length; x++){
             var entityCalss = world.getClasses()[x];
             if (world.getRandomCoordinates() == null) break;
-            if ((x == 4 || x == 3) && world.getEntityesOfType(entityCalss).size() > 2) continue;
+            if ((x == 4 || x == 3) && world.getEntityesOfType(entityCalss).size() > 3) continue;
             if (world.getEntityesOfType(entityCalss).size() < 5) {
                 addEntity(world, entityCalss);
                 addEntity(world, entityCalss);
@@ -32,6 +37,7 @@ public class EntityFactory extends Action { // Класс для создани�
             case "Grass" -> new Grass(coordinates, hp);
             case "Rock" -> new Rock(coordinates);
             case "Tree" -> new Tree(coordinates);
+            case "Hunter" -> new Hunter(coordinates, 1,10);
             default -> throw new IllegalArgumentException("Invalid class");
         };
         world.setEntity(coordinates,entity);
