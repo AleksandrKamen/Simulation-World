@@ -14,21 +14,23 @@ public class Herbivore extends Creature { // Класс реализующий -
     @Override
     public void makeMove(MapWorld map) {                                   // может потратить свой ход на движение в сторону ресурса, либо на его поглощение.
         super.makeMove(map);
-        if (HP > 0) {
+        if (HP < 0) {
+            dead(map);
+            map.HerbDead++;
+        } else{
             for (Entity e : getnearEntity(map))                              // Если по пблизости есть ресурс - ест его
                 if (e instanceof Grass) {
                     eatGrass((Grass) e, map);
                     break;
                 }
             if (!satiety && !map.getEntityesOfType(Grass.class).isEmpty()) {    // Если по близости ресурса не оказалось - двигаться в направлении ближайшего
-                var list = this.path(map, Grass.class);
+                var list = finder.path(coordinates,map, Grass.class);
                 map.removeCreature(this, list.get(speed));
             }
 
-        }   else {
-            dead(map);
-            map.HerbDead++;
         }
+
+
     } // Совершить ход
     public void eatGrass(Grass grass, MapWorld world) {
         HP += grass.countGrass;

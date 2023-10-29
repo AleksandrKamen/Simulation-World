@@ -18,7 +18,10 @@ public class Predator extends Creature { // Класс реализующий - 
     @Override
     public void makeMove(MapWorld map) {
         super.makeMove(map);
-        if (HP > 0) {
+        if (HP < 0) {
+            dead(map);
+            map.PredDead++;
+        } else {
              for (Entity e : getnearEntity(map))                           // Если по пблизости есть травоядное - нападает
                 if (e instanceof Herbivore) {
                     eat((Herbivore) e, map);
@@ -26,13 +29,10 @@ public class Predator extends Creature { // Класс реализующий - 
                 }
             if (!satiety) {
                 if (!map.getEntityesOfType(Herbivore.class).isEmpty()) { // Если по близости травоядного не оказалось - двигаться в направлении ближайшего
-                    var list = path(map, Herbivore.class);
+                    var list = finder.path(coordinates,map, Herbivore.class);
                     map.removeCreature(this, list.get(speed));
                 }
             }
-        } else {
-            dead(map);
-            map.PredDead++;
         }
     }                                                        // Метод реализующий ход хищника
 
