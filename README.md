@@ -24,17 +24,13 @@
  
 ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/apple_red.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/apple_red_full.png) 
  
- **Tree** - класс реализующий  статический объект – дерево, занимает клетку на поле. 
+ **Tree** - класс реализующий  статический объект – дерево, занимает клетку на поле. После определенного времени начинает стареть, пока не исчезнет.
  
- Swing реализация -  
- 
- Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Tree.png) 
+ ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/tree.png)  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/treeSpring.png) 
  
  **Rock** - класс реализующий  статический объект - гора , занимает клетку на поле. 
  
- Swing реализация -  
- 
- Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/rook.png) 
+![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/rock.png) 
  
  **DeadCreature** – класс реализующий мертвый/съеденный объект, отображается 1 ход 
   Swing реализация -  
