@@ -1,5 +1,5 @@
 #                                              Обзор проекта (Simulation)
-<p align="center"> <img width="1000" height="700" src="https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Сим.jpg"> </p>
+<img src="https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Simulation-world-project-2023-10-29-15-02-15.gif" width="40" height="40" />
 
 
 **Техническое задание проекта** -  https://zhukovsd.github.io/java-backend-learning-course/Projects/Simulation/
