@@ -15,8 +15,9 @@
  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/cow.png)  При атаки хищника истекает кровью.  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/blood2.png) 
  
  
- ##                                                   **Класс Human**
-Класс реализующий охотника. Охотится на класс Predator.
+ ##                                                   **Класс Hunter**
+Класс реализующий охотника. Охотится на класс Predator. ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/hunter.png)  
+
  
  ## Статические классы
  **Grass** - класс реализующий - ресурс для травоядных животных, обладает показателем питательности. 
