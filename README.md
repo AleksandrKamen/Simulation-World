@@ -31,9 +31,11 @@ Swing реализация -
  
  Консольная реализация - ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/rook.png) 
  
- **DeadCreature** – класс реализующий мертвый/съеденный объект, отображается 1 ход ![Image alt](https://github.com/AleksandrKamen/Simulation-
- Swing реализация -  
+ **DeadCreature** – класс реализующий мертвый/съеденный объект, отображается 1 ход 
+  Swing реализация -  
+  
  Консольная реализация -  ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/ch2.png) 
+                          ![Image alt](https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/skull.png) 
 ## Пользовательский интерфейс  и возможности 
 Swing реализация -  
 
