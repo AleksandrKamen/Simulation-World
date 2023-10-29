@@ -37,7 +37,7 @@
 
 ## Пользовательский интерфейс  и возможности 
 
-Взаимодействие с пользователем реализовано через выбор действия (1-6).
+Взаимодействие с пользователем реализовано через выбор действия с помощью кнопок на панели снизу.
  
  
   <p align="center"> <img width="500" height="300" src = https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/1.png> </p>
@@ -56,7 +56,7 @@
 
 **5. Показать статистику мира** – Выводит статистику мира на текущий ход
 
-  <p align="center"> <img width="700" height="300" src = https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/7.png> </p>
+  <p align="center"> <img width="700" height="300" src = https://github.com/AleksandrKamen/Simulation-World/blob/master/Picture/Swing.Picture/bottom.png> </p>
 
   **6.Выход из симуляции** – Завершает работу программы. 
 
