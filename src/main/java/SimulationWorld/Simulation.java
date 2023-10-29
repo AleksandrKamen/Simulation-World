@@ -5,10 +5,12 @@ import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
 import lombok.Getter;
 import lombok.SneakyThrows;
+import lombok.extern.log4j.Log4j;
 
+@Log4j
 public class Simulation { // Класс реализуюший симуляцию мира
     private static boolean stop = false;                                 // Флаг для паузы симуляции
-    @Getter private static int moveCount = 0;                           // Счетчик ходов и getter счетчика ходов
+    @Getter private static int moveCount = 1;                           // Счетчик ходов и getter счетчика ходов
     Simulation(){
         Coordinates.setMaxSize(15);
         Action.render(Simulation.world);
@@ -17,17 +19,17 @@ public class Simulation { // Класс реализуюший симуляци�
 
     @SneakyThrows
     public static void nextTurn() {
-        Action.checkPopulation(world);
+//        Action.checkPopulation(world);
         Action.moveAllCreature(world);
         Action.changeTree(world);
         Action.render(world);
         Action.clearMap(world);
-        System.out.println("Move № " + moveCount++);
+        log.info("Next turn - Move №" + moveCount++);
         Thread.sleep(1000);
     } // Метод - симуляция 1 хода и его отрисовка
 
     public static void startSimulation(int count) {
-        moveCount = 0;
+        moveCount = 1;
         stop = false;
         while (!stop) {
             nextTurn();
@@ -35,7 +37,7 @@ public class Simulation { // Класс реализуюший симуляци�
         }
     }                                                  // метод запускает симуляцию на указанное кол-во ходов
     public static void startSimulation(){
-//        moveCount = 0;
+        log.info("Start Simulation");
         stop = false;
         while (!stop) {
             nextTurn();
@@ -48,6 +50,7 @@ public class Simulation { // Класс реализуюший симуляци�
 
     public static void stopSimulation(){
         stop = true;
+        log.info("Pause Simulation");
     }
 
 }

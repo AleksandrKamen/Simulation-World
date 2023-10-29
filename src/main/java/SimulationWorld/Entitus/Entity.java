@@ -6,8 +6,8 @@ import lombok.Setter;
 public abstract class Entity {       // суперкласс для  всех объектов мира
     public Coordinates coordinates;
     public String icon;
-   @Setter @Getter  protected String pathPicture;
-  protected String res = "src/main/resources/Picture/";
+  @Setter @Getter  protected String pathPicture;
+  @Getter protected String res = "src/main/resources/Picture/";
 
     public Entity(Coordinates coordinates) {
         this.coordinates = coordinates;

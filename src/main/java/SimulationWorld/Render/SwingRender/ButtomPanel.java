@@ -9,10 +9,12 @@ import SimulationWorld.Entitus.Grass;
 import SimulationWorld.Entitus.Rock;
 import SimulationWorld.Entitus.Tree;
 import SimulationWorld.Simulation;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.*;
 import java.awt.*;
-
+@Log4j
 public class ButtomPanel extends JPanel {
     private final JButton start = new JButton("start");
     private final JButton pause = new JButton("pause");
@@ -52,36 +54,42 @@ public class ButtomPanel extends JPanel {
 
     public void turnNextButtomCliced(){
         nextTurn.addActionListener(e-> Simulation.nextTurn());
+
     }
 
     public void moreRock(){
         moreRock.addActionListener(e-> {
             EntityFactory.addEntity(Simulation.getWorld(), Rock.class);
             Action.render(Simulation.getWorld());
+            log.info("added object Rock");
         });
     }
     public void moreHerbivore(){
         moreHerbivore.addActionListener(e-> {
             EntityFactory.addEntity(Simulation.getWorld(), Herbivore.class);
             Action.render(Simulation.getWorld());
+            log.info("added object Herbivore");
         });
     }
     public void morePredator(){
         morePredator.addActionListener(e-> {
             EntityFactory.addEntity(Simulation.getWorld(), Predator.class);
             Action.render(Simulation.getWorld());
+            log.info("added object Predator");
         });
     }
     public void moreTree(){
         moreTree.addActionListener(e-> {
             EntityFactory.addEntity(Simulation.getWorld(), Tree.class);
             Action.render(Simulation.getWorld());
+            log.info("added object Tree");
         });
     }
     public void moreGrass(){
         moreGrass.addActionListener(e-> {
             EntityFactory.addEntity(Simulation.getWorld(), Grass.class);
             Action.render(Simulation.getWorld());
+            log.info("added object Grass");
         });
     }
     public void startSimulationButtomCliked(){

@@ -63,7 +63,7 @@ public class Predator extends Creature { // Класс реализующий - 
             } else world.HerbDead++;
             var coordinates1 = prey.coordinates;
             world.getMapWorld().remove(coordinates1);
-            DeadEntity deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[0]);
+            var deadEntity = new DeadEntity(coordinates1, Icons.DeadObject[0]);
             deadEntity.setPathPicture(res + "skull.png");
             world.setEntity(coordinates1, deadEntity);
 

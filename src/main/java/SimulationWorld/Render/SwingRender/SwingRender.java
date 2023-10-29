@@ -1,6 +1,5 @@
 package SimulationWorld.Render.SwingRender;
 
-import SimulationWorld.Entitus.Entity;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
 import SimulationWorld.Render.RendererMap;
@@ -44,8 +43,8 @@ public class SwingRender extends RendererMap {
 
         for (int rank = 1; rank <= Coordinates.getMaxSize(); rank++) {
             for (int file = 1; file <= Coordinates.getMaxSize(); file++) {
-                Coordinates coordinates = new Coordinates(rank, file);
-                Entity entity = mapWorld.getEntity(coordinates);
+                var coordinates = new Coordinates(rank, file);
+                var entity = mapWorld.getEntity(coordinates);
                 if (entity != null) {
                     simulationPanel.add(new EntityContainer(new ImageIcon(entity.getPathPicture())));
                 }

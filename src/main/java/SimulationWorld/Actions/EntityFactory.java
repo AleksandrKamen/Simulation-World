@@ -4,11 +4,13 @@ import SimulationWorld.Entitus.Creatures.Herbivore;
 import SimulationWorld.Entitus.Creatures.Predator;
 import SimulationWorld.Map.Coordinates;
 import SimulationWorld.Map.MapWorld;
+import lombok.extern.log4j.Log4j;
 
+@Log4j
 public class EntityFactory extends Action { // Класс для создания новых существ
 
     public  static  void addMoreEntitys(MapWorld world){
-
+        int quantityBefore = world.getMapWorld().size();
         for (int x= 0; x < world.getClasses().length; x++){
             if (world.getRandomCoordinates() == null) break;
             if ((x == 4 || x == 3) && world.getEntityesOfType(world.getClasses()[x]).size() > 2) continue;
@@ -17,6 +19,8 @@ public class EntityFactory extends Action { // Класс для создани�
                 addEntity(world, world.getClasses()[x]);
             }
         }
+        int quantityAfter = world.getMapWorld().size();
+        log.info(String.format("%d objects added",quantityAfter-quantityBefore));
         }    // Добавляет по объекту каждого класса, кроме гор и деревьев
 
     public static  <T extends Entity> void addEntity(MapWorld world, Class<T> type) {
